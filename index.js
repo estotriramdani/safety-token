@@ -33,12 +33,17 @@ var verify = function (token, uniqueCode) {
             token: '-'
         };
     }
-    var tokenLength = token.length;
+    var realToken = '';
+    for (var index = 0; index < token.length - 56; index++) {
+        realToken += token[index];
+    }
+    console.log(realToken);
+    var tokenLength = realToken.length;
     var firstGroupLength = Math.ceil(tokenLength / 2);
-    var firstGroupString = splitString(0, firstGroupLength, token);
-    var secondGroupString = splitString(firstGroupLength, tokenLength, token);
+    var firstGroupString = splitString(0, firstGroupLength, realToken);
+    var secondGroupString = splitString(firstGroupLength, tokenLength, realToken);
     var newString = firstGroupString + secondGroupString;
-    if (newString === token) {
+    if (newString === realToken) {
         return {
             status: true,
             message: 'Token is valid',

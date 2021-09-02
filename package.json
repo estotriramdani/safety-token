@@ -4,6 +4,13 @@
   "description": "This package helps you to keep your token safety before save it to localStorage (or something) in simple way",
   "main": "index.js",
   "author": "estotriramdani",
+  "contributors": [
+    {
+      "email": "estolagi@gmail.com",
+      "name": "Esto Triramdani N",
+      "url": "https://estotriramdani.github.io"
+    }
+  ],
   "license": "MIT",
   "scripts": {
     "dev": "ts-node index.ts"
@@ -13,5 +20,9 @@
   },
   "dependencies": {
     "password-hash": "^1.2.2"
+  },
+  "repository": {
+    "type": "GitHub",
+    "url": "https://github.com/estotriramdani/safety-token"
   }
 }

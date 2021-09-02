@@ -48,16 +48,20 @@ const verify = (token: string, uniqueCode: string): ReturnValue => {
       token: '-',
     };
   }
-  const tokenLength = token.length;
+  let realToken: string = '';
+  for (let index = 0; index < token.length - 56; index++) {
+    realToken += token[index];
+  }
+  const tokenLength = realToken.length;
   const firstGroupLength = Math.ceil(tokenLength / 2);
-  let firstGroupString: string = splitString(0, firstGroupLength, token);
+  let firstGroupString: string = splitString(0, firstGroupLength, realToken);
   let secondGroupString: string = splitString(
     firstGroupLength,
     tokenLength,
-    token
+    realToken
   );
   const newString = firstGroupString + secondGroupString;
-  if (newString === token) {
+  if (newString === realToken) {
     return {
       status: true,
       message: 'Token is valid',
