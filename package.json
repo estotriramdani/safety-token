@@ -1,6 +1,6 @@
 {
   "name": "safety-token",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This package helps you to keep your token safety before save it to localStorage (or something) in simple way",
   "main": "index.js",
   "author": "estotriramdani",
