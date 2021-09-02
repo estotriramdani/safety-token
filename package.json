@@ -1,0 +1,17 @@
+{
+  "name": "safety-token",
+  "version": "0.0.1",
+  "description": "This package helps you to keep your token safety before save it to localStorage (or something) in simple way",
+  "main": "index.js",
+  "author": "estotriramdani",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node index.ts"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "password-hash": "^1.2.2"
+  }
+}
