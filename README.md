@@ -46,7 +46,7 @@ If the unique code and protected token are valid, you will get an object with st
 Otherwise, if your protected token nor unique code are invalid, it will returns:
 
     {
-      status: false,
+        status: false,
     	message: 'Unique code is invalid',
     	token: '-'
     }
