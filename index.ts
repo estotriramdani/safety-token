@@ -44,7 +44,7 @@ const verify = (token: string, uniqueCode: string): ReturnValue => {
   if (!passwordHash.verify(uniqueCode, hashedUniqueCode)) {
     return {
       status: false,
-      message: 'Unique code is invalid',
+      message: 'Unique code or protected token is invalid',
       token: '-',
     };
   }
